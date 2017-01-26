@@ -14,4 +14,9 @@ class TestController extends Controller
     {
         return view('layouts.main');
     }
+
+    public function echoConstant()
+    {
+        echo config('constants.ProductManager');
+    }
 }

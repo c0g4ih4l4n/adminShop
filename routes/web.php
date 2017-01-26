@@ -19,4 +19,6 @@ Auth::routes();
 
 Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index']);
 
-Route::get('/test', 'TestController@home');
+Route::get('/test', 'TestController@echoConstant');
+
+Route::resource('category', 'CategoryController');

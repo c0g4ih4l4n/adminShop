@@ -26,4 +26,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function hasRole($role)
+    {
+        $roleConst = 'constants.' . $role;
+        return $this->role == config($roleConst);
+    }
 }
