@@ -1,6 +1,8 @@
 <nav class="navbar-default navbar-side" role="navigation">
     <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
+
+
             <li>
                 <div class="user-img-div">
                     <img src="{{ URL::asset('img/user.png') }}" class="img-thumbnail" />
@@ -16,117 +18,80 @@
 
 
             <li>
-                <a class="active-menu" href="index.html"><i class="fa fa-dashboard "></i>Dashboard</a>
+                <a class="active-menu" href="{{ URL::route('home') }}"><i class="fa fa-dashboard "></i>Dashboard</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-desktop "></i>UI Elements <span class="fa arrow"></span></a>
-                 <ul class="nav nav-second-level">
+                <a href="#"><i class="fa fa-desktop "></i>Orders <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+
                     <li>
-                        <a href="panel-tabs.html"><i class="fa fa-toggle-on"></i>Tabs & Panels</a>
+                        <a href="grid.html"><i class="fa fa-eyedropper "></i>Create New Order</a>
                     </li>
+
                     <li>
-                        <a href="notification.html"><i class="fa fa-bell "></i>Notifications</a>
-                    </li>
-                     <li>
-                        <a href="progress.html"><i class="fa fa-circle-o "></i>Progressbars</a>
-                    </li>
-                     <li>
-                        <a href="buttons.html"><i class="fa fa-code "></i>Buttons</a>
-                    </li>
-                     <li>
-                        <a href="icons.html"><i class="fa fa-bug "></i>Icons</a>
-                    </li>
-                     <li>
-                        <a href="wizard.html"><i class="fa fa-bug "></i>Wizard</a>
-                    </li>
-                     <li>
-                        <a href="typography.html"><i class="fa fa-edit "></i>Typography</a>
-                    </li>
-                     <li>
-                        <a href="grid.html"><i class="fa fa-eyedropper "></i>Grid</a>
+                        <a href=""><i class="fa fa-search"></i>Find An Order</a>
                     </li>
 
-
-                </ul>
-            </li>
-             <li>
-                <a href="#"><i class="fa fa-yelp "></i>Extra Pages <span class="fa arrow"></span></a>
-                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="invoice.html"><i class="fa fa-coffee"></i>Invoice</a>
-                    </li>
-                    <li>
-                        <a href="pricing.html"><i class="fa fa-flash "></i>Pricing</a>
-                    </li>
-                     <li>
-                        <a href="component.html"><i class="fa fa-key "></i>Components</a>
-                    </li>
-                     <li>
-                        <a href="social.html"><i class="fa fa-send "></i>Social</a>
+                        <a href=""><i class="fa fa-list"></i>Order List</a>
                     </li>
 
-                     <li>
-                        <a href="message-task.html"><i class="fa fa-recycle "></i>Messages & Tasks</a>
-                    </li>
-
-
-                </ul>
-            </li>
-            <li>
-                <a href="table.html"><i class="fa fa-flash "></i>Data Tables </a>
-
-            </li>
-             <li>
-                <a href="#"><i class="fa fa-bicycle "></i>Forms <span class="fa arrow"></span></a>
-                 <ul class="nav nav-second-level">
-
-                     <li>
-                        <a href="form.html"><i class="fa fa-desktop "></i>Basic </a>
-                    </li>
-                     <li>
-                        <a href="form-advance.html"><i class="fa fa-code "></i>Advance</a>
-                    </li>
-
-
-                </ul>
-            </li>
-              <li>
-                <a href="gallery.html"><i class="fa fa-anchor "></i>Gallery</a>
-            </li>
-             <li>
-                <a href="error.html"><i class="fa fa-bug "></i>Error Page</a>
-            </li>
-            <li>
-                <a href="login.html"><i class="fa fa-sign-in "></i>Login Page</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-sitemap "></i>Multilevel Link <span class="fa arrow"></span></a>
-                 <ul class="nav nav-second-level">
-                    <li>
-                        <a href="#"><i class="fa fa-bicycle "></i>Second Level Link</a>
-                    </li>
-                     <li>
-                        <a href="#"><i class="fa fa-flask "></i>Second Level Link</a>
-                    </li>
-                    <li>
-                        <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                        <ul class="nav nav-third-level">
-                            <li>
-                                <a href="#"><i class="fa fa-plus "></i>Third Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-comments-o "></i>Third Level Link</a>
-                            </li>
-
-                        </ul>
-
-                    </li>
                 </ul>
             </li>
 
             <li>
-                <a href="blank.html"><i class="fa fa-square-o "></i>Blank Page</a>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Category <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+
+                    <li>
+                        <a href="grid.html"><i class="fa fa-eyedropper "></i>Create New Category</a>
+                    </li>
+
+                    <li>
+                        <a href=""><i class="fa fa-list"></i>Category List</a>
+                    </li>
+
+                </ul>
             </li>
+
+            <li>
+                <a href="#"><i class="fa fa-cube fa-fw"></i>Products <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+
+                    <li>
+                        <a href="grid.html"><i class="fa fa-eyedropper "></i>Create New Product</a>
+                    </li>
+
+                    <li>
+                        <a href=""><i class="fa fa-search"></i>Find An Product</a>
+                    </li>
+
+                    <li>
+                        <a href=""><i class="fa fa-list"></i>Product List</a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="#"><i class="fa fa-users fa-fw"></i>Users <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+
+                    <li>
+                        <a href="grid.html"><i class="fa fa-eyedropper "></i>Create New User</a>
+                    </li>
+
+                    <li>
+                        <a href=""><i class="fa fa-search"></i>Find An User</a>
+                    </li>
+
+                    <li>
+                        <a href=""><i class="fa fa-list"></i>User List</a>
+                    </li>
+
+                </ul>
+            </li>
+
         </ul>
 
     </div>
