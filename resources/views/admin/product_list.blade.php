@@ -42,28 +42,23 @@
                 </thead>
                 <tbody>
 
-                        <th>1</th>
-                        <th>Sh's Van</th>
-                        <th>Shoe</th>
-                        <th>Vans</th>
-                        <th>M,N,S,P</th>
-                        <th>Red</th>
-                        <th>Cotton</th>
-                        <th>10.000</th>
-                        <th>1002</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    {{-- @foreach ($list_cate as $category)
+                    @foreach ($list_product as $product)
 
                     <tr>
-                        <td>{{ $category->id }}</td>
-                        <td>{{ $category->name }}</td>
-                        <td>{{ $category->number_of_products }}</td>
+                        <td>{{ $product->id }}</td>
+                        <td>{{ $product->name }}</td>
+                        <td>{{ $product->category_id }}</td>
+                        <td>{{ $product->brand_id }}</td>
+                        <td>{{ $product->size }}</td>
+                        <td>{{ $product->color }}</td>
+                        <td>{{ $product->material }}</td>
+                        <td>{{ $product->cost }}</td>
+                        <td>{{ $product->quantity_remain }}</td>
                         <td>Edit</td>
                         <td>Delete</td>
                     </tr>
 
-                    @endforeach --}}
+                    @endforeach
                 </tbody>
             </table>
 

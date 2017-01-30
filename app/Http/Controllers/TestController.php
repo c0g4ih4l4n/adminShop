@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Product;
+
 class TestController extends Controller
 {
 
@@ -22,6 +24,10 @@ class TestController extends Controller
 
     public function testView()
     {
-        return view('admin.cate_add');
+        $list_product = Product::all();
+
+        $data = array('list_product' => $list_product);
+
+        return view('admin.product_list')->with($data);
     }
 }
