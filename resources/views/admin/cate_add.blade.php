@@ -11,18 +11,30 @@
     </div>
 
     <div class="panel-body">
+
+    {{-- Form Create Category --}}
         <form role="form" action="{{ URL::route('category.store') }}" method="POST">
         {{ csrf_field() }}
             <div class="form-group">
                 <label>Enter Category Name</label>
-                <input class="form-control" type="text" placeholder="Category Name Here .." name="name">
-                <p class="help-block"></p>
+
+                {{-- Old Value --}}
+                <input class="form-control" type="text" name="name" value="{{ old('name') }}" placeholder="Category Name Here ..">
+
+                {{-- Error --}}
+                @if (isset($errors))
+                    @foreach ($errors->all() as $error)
+                        <p class="text-danger">{{ $error }}</p>
+                    @endforeach
+                @endif
+
             </div>
 
             <button type="submit" class="btn btn-info">Create </button>
 
         </form>
     </div>
+    {{-- ./PANEL BODY --}}
 </div>
 
 </div>

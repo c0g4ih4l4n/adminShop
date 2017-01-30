@@ -27,4 +27,17 @@ class CategoryCreateRequest extends FormRequest
             'name' => 'required|max:20',
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => 'Category Name is required !',
+            'name.max' => 'Category Name is too long !'
+        ];
+    }
 }
