@@ -23,7 +23,7 @@ class CategoryController extends Controller
     public function index()
     {
 
-        return 'yes';
+        return view('admin.cate_list');
     }
 
     /**
@@ -33,7 +33,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.cate_add');
     }
 
     /**

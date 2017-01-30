@@ -22,6 +22,6 @@ class TestController extends Controller
 
     public function testView()
     {
-        return view('admin.cate_list');
+        return view('admin.cate_add');
     }
 }

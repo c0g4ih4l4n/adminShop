@@ -44,11 +44,11 @@
                 <ul class="nav nav-second-level">
 
                     <li>
-                        <a href="grid.html"><i class="fa fa-eyedropper "></i>Create New Category</a>
+                        <a href="{{ URL::route('category.create') }}"><i class="fa fa-eyedropper "></i>Create New Category</a>
                     </li>
 
                     <li>
-                        <a href=""><i class="fa fa-list"></i>Category List</a>
+                        <a href="{{ URL::route('category.index') }}"><i class="fa fa-list"></i>Category List</a>
                     </li>
 
                 </ul>
