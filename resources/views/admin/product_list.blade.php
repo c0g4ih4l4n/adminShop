@@ -47,8 +47,8 @@
                     <tr>
                         <td>{{ $product->id }}</td>
                         <td>{{ $product->name }}</td>
-                        <td>{{ $product->category_id }}</td>
-                        <td>{{ $product->brand_id }}</td>
+                        <td>{{ $product->category }}</td>
+                        <td>{{ $product->brand }}</td>
                         <td>{{ $product->size }}</td>
                         <td>{{ $product->color }}</td>
                         <td>{{ $product->material }}</td>
