@@ -19,4 +19,9 @@ class TestController extends Controller
     {
         echo config('constants.ProductManager');
     }
+
+    public function testView()
+    {
+        return view('admin.cate_list');
+    }
 }
