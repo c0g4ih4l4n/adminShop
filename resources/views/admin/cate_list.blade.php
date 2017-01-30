@@ -35,13 +35,18 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                    @foreach ($list_cate as $category)
+
                     <tr>
-                        <td>1</td>
-                        <td>Ao</td>
-                        <td>1</td>
+                        <td>{{ $category->id }}</td>
+                        <td>{{ $category->name }}</td>
+                        <td>{{ $category->number_of_products }}</td>
                         <td>Edit</td>
                         <td>Delete</td>
                     </tr>
+
+                    @endforeach
                 </tbody>
             </table>
 

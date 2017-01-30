@@ -31,7 +31,13 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.cate_list');
+        $list_cate = Category::all();
+
+        $data = array (
+            'list_cate' => $list_cate,
+            );
+
+        return view('admin.cate_list')->with($data);
     }
 
     /**
