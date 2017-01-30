@@ -67,7 +67,7 @@
                     </li>
 
                     <li>
-                        <a href=""><i class="fa fa-list"></i>Product List</a>
+                        <a href="{{ URL::route('product.index') }}"><i class="fa fa-list"></i>Product List</a>
                     </li>
 
                 </ul>

@@ -22,3 +22,5 @@ Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index']);
 Route::get('/test', 'TestController@testView');
 
 Route::resource('category', 'CategoryController');
+
+Route::resource('product', 'ProductController');
