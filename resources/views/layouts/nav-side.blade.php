@@ -55,7 +55,7 @@
             </li>
 
             <li>
-                <a href="#"><i class="fa fa-cube fa-fw"></i>Products <span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-cube fa-fw"></i>Product <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
 
                     <li>
@@ -63,7 +63,7 @@
                     </li>
 
                     <li>
-                        <a href=""><i class="fa fa-search"></i>Find An Product</a>
+                        <a href=""><i class="fa fa-search"></i>Find Product</a>
                     </li>
 
                     <li>
@@ -74,7 +74,7 @@
             </li>
 
             <li>
-                <a href="#"><i class="fa fa-users fa-fw"></i>Users <span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-users fa-fw"></i>User <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
 
                     <li>
@@ -82,11 +82,27 @@
                     </li>
 
                     <li>
-                        <a href=""><i class="fa fa-search"></i>Find An User</a>
+                        <a href=""><i class="fa fa-search"></i>Find User</a>
                     </li>
 
                     <li>
                         <a href=""><i class="fa fa-list"></i>User List</a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="#"><i class="fa fa-flag fa-fw"></i>Brand <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+
+                    <li>
+                        <a href="grid.html"><i class="fa fa-eyedropper "></i>Create New Brand</a>
+                    </li>
+
+                    <li>
+                        <a href=""><i class="fa fa-list"></i>Brand List</a>
                     </li>
 
                 </ul>
