@@ -2,9 +2,18 @@
 
 namespace App\Http\Controllers;
 
+// Request
 use Illuminate\Http\Request;
+use App\Http\Requests\CategoryCreateRequest;
 
+// Support
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Response;
+
+// Model
+use App\Category;
 
 class CategoryController extends Controller
 {
@@ -22,7 +31,6 @@ class CategoryController extends Controller
      */
     public function index()
     {
-
         return view('admin.cate_list');
     }
 
@@ -39,12 +47,16 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\CategoryCreateRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryCreateRequest $request)
     {
-        //
+        $new_cate = Category::withRequest($request);
+
+        $new_cate->save();
+
+        return Redirect::route('category.index');
     }
 
     /**
