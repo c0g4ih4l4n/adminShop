@@ -59,7 +59,7 @@
                 <ul class="nav nav-second-level">
 
                     <li>
-                        <a href="grid.html"><i class="fa fa-eyedropper "></i>Create New Product</a>
+                        <a href=""><i class="fa fa-eyedropper "></i>Create New Product</a>
                     </li>
 
                     <li>
