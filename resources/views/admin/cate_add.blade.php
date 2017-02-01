@@ -1,6 +1,11 @@
 
 
 @extends ('layouts.main')
+
+@section ('header-css')
+    @include ('layouts.material.header-css-main')
+@stop
+
 @section ('content')
 <div id="page-wrapper">
 <div id="page-inner">

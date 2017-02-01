@@ -24,10 +24,6 @@ class TestController extends Controller
 
     public function testView()
     {
-        $list_product = Product::all();
-
-        $data = array('list_product' => $list_product);
-
-        return view('admin.product_list')->with($data);
+        return view('admin.product_add');
     }
 }

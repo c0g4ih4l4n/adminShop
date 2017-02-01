@@ -98,7 +98,7 @@
                 <ul class="nav nav-second-level">
 
                     <li>
-                        <a href="grid.html"><i class="fa fa-eyedropper "></i>Create New Brand</a>
+                        <a href="{{ URL::route('home') }}"><i class="fa fa-eyedropper "></i>Create New Brand</a>
                     </li>
 
                     <li>
