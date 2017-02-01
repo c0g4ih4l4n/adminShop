@@ -46,3 +46,8 @@
 
 </div>
 @stop
+
+
+@section ('script')
+    @include ('layouts.material.main-script')
+@stop

@@ -1,5 +1,5 @@
 <!-- Bootstrap styles -->
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+{{-- <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> --}}
 <!-- Generic page styles -->
 <link rel="stylesheet" href="{{ URL::asset('jQuery-File-Upload-9.14.2/css/style.css') }}">
 <!-- blueimp Gallery styles -->

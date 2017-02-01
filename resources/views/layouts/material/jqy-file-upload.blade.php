@@ -73,9 +73,9 @@
     </tr>
 {% } %}
 </script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-<script src="js/vendor/jquery.ui.widget.js"></script>
+<script src="{{ URL::asset('jQuery-File-Upload-9.14.2/js/vendor/jquery.ui.widget.js') }}"></script>
 <!-- The Templates plugin is included to render the upload/download listings -->
 <script src="http://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
 <!-- The Load Image plugin is included for the preview images and image resizing functionality -->

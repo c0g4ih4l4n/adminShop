@@ -111,29 +111,31 @@
                 </div>
         </div>
 
-        <div class="row">
+{{--         <div class="row">
 
             <div class="form-group">
-                    <label class="control-label col-lg-4 col-md-4">Pre Defined Image</label>
-                    <div class="">
-                        <div class="fileupload fileupload-new" data-provides="fileupload">
-                            <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="{{ URL::asset('img/demoUpload.jpg') }}" alt="" /></div>
-                            <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
-                            <div>
-                                <span class="btn btn-file btn-primary"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"></span>
-                                <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
-                            </div>
+                <label class="control-label col-lg-4 col-md-4">Pre Defined Image</label>
+                <div class="">
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                        <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="{{ URL::asset('img/demoUpload.jpg') }}" alt="" /></div>
+                        <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                        <div>
+                            <span class="btn btn-file btn-primary"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"></span>
+                            <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-        </div>
+        </div> --}}
 
-            <form id="fileupload" action="https://jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data">
+
         <!-- Redirect browsers with JavaScript disabled to the origin page -->
         <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript>
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-        <div class="row fileupload-buttonbar">
+        <label class="control-label col-lg-12 col-md-12 row">Pre Defined Image</label>
+        <div class="row fileupload-buttonbar form-group">
+
             <div class="col-lg-7">
                 <!-- The fileinput-button span is used to style the file input field as button -->
                 <span class="btn btn-success fileinput-button">
@@ -169,29 +171,6 @@
         </div>
         <!-- The table listing the files available for upload/download -->
         <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
-    </form>
-
-                    {{-- Category - check list --}}
-          {{--   <div class="form-group">
-                <label for="">Category</label>
-                <select class="form-control">
-                    <option>One Vale</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="">Brand</label>
-                <select class="form-control">
-                    <option>One Vale</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="">Category</label>
-                <select class="form-control">
-                    <option>One Vale</option>
-                </select>
-            </div> --}}
 
         <div class="clearfix"></div>
 
@@ -207,5 +186,10 @@
 
 </div>
 
-@include ('layouts.material.jqy-file-upload')
+
+@stop
+
+@section ('script')
+    @include ('layouts.material.main-script')
+    @include ('layouts.material.jqy-file-upload')
 @stop

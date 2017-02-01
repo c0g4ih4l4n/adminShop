@@ -7,17 +7,7 @@
     </div>
     <!-- /. FOOTER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="{{ URL::asset('js/jquery-1.10.2.js') }}"></script>
-    <!-- BOOTSTRAP SCRIPTS -->
-    <script src="{{ URL::asset('js/bootstrap.js') }}"></script>
-    <!-- PAGE LEVEL SCRIPTS -->
-    <script src="{{ URL::asset('js/bootstrap-fileupload.js') }}"></script>
-    <!-- METISMENU SCRIPTS -->
-    <script src="{{ URL::asset('js/jquery.metisMenu.js') }}"></script>
-       <!-- CUSTOM SCRIPTS -->
-    <script src="{{ URL::asset('js/custom.js') }}"></script>
-
+    @yield ('script')
 
 
 </body>
