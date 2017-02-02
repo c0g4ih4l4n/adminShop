@@ -21,7 +21,15 @@
     <div class="panel-body">
 
         {{-- Form Create Category --}}
-        <form role="form" action="{{ URL::route('category.store') }}" method="POST" id="fileupload" enctype="multipart/form-data">
+        <form role="form" action="{{ URL::route('product.store') }}" method="POST" id="fileupload" enctype="multipart/form-data">
+
+        @if (isset($errors))
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li class="text-danger">{{ $error }}</li>
+            @endforeach
+        </ul>
+        @endif
 
         <div class="row">
             {{ csrf_field() }}
@@ -38,41 +46,94 @@
         <div class="row">
         <div class="form-group col-md-5">
             <label>Sex</label>
+
+            @if (old('sex') != null)
             <div class="radio">
                 <label>
-                    <input type="radio" name="sex" id="optionsRadios1" value="option1" checked="">Nam
+                @if (old('sex') == 0)
+                    <input type="radio" name="sex" id="optionsRadios1" value="0" checked="">Nam
+                @else
+                    <input type="radio" name="sex" id="optionsRadios1" value="0">Nam
+                @endif
+
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" name="sex" id="optionsRadios2" value="option2">Nu
+                @if (old('sex') == 1)
+                    <input type="radio" name="sex" id="optionsRadios1" value="1" checked="">Nu
+                @else
+                    <input type="radio" name="sex" id="optionsRadios1" value="1">Nu
+                @endif
                 </label>
             </div>
+
+            @else
+
+            <div class="radio">
+                <label>
+                    <input type="radio" name="sex" id="optionsRadios1" value="0" checked="">Nam
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="sex" id="optionsRadios2" value="1">Nu
+                </label>
+            </div>
+
+            @endif
         </div>
         </div>
 
         {{-- List Category --}}
         <div class="row">
             <div class="form-group col-md-5">
-                    <label>Category</label>
+                <label>Category</label>
 
-                    <select class="form-control" name="category">
-                        <option value="0">Pick A Category</option>
-                    @foreach ($list_category as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                    @endforeach
-                    </select>
-                </div>
+            @if (old('category_id') == null)
+                <select class="form-control" name="category_id">
+                    <option value="0">Pick A Category</option>
+                @foreach ($list_category as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+                </select>
+            @else
+                <select class="form-control" name="category_id">
+                    <option value="0">Pick A Category</option>
+                @foreach ($list_category as $category)
+                    @if (old('category_id') == $category->id)
+                    <option value="{{ $category->id }}" selected="selected">{{ $category->name }}</option>
+                    @else
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endif
+                @endforeach
+                </select>
+            @endif
+            </div>
 
+
+        {{-- List Brand --}}
             <div class="form-group col-md-5 col-md-offset-1">
                     <label>Brand</label>
-
-                    <select class="form-control" name="brand">
+                @if (old('brand_id') == null)
+                    <select class="form-control" name="brand_id">
                         <option value="0">Pick A Brand</option>
                     @foreach ($list_brand as $brand)
                         <option value="{{ $brand->id }}">{{ $brand->name }}</option>
                     @endforeach
                     </select>
+                @else
+                    <select class="form-control" name="brand_id">
+                        <option value="0">Pick A Brand</option>
+                    @foreach ($list_brand as $brand)
+                    @if (old('brand_id') == $brand->id)
+                        <option value="{{ $brand->id }}" selected>{{ $brand->name }}</option>
+                    @else
+                        <option value="{{ $brand->id }}">{{ $brand->name }}</option>
+                    @endif
+                    @endforeach
+                    </select>
+                @endif
                 </div>
             <hr>
 
@@ -82,13 +143,13 @@
             <div class="form-group col-md-5">
                     <label>Size</label>
 
-                    <input class="form-control" type="text" name="size" placeholder="Enter Size here ..">
+                    <input class="form-control" type="text" name="size" placeholder="Enter Size here .." value="{{ old('size') }}">
                 </div>
 
             <div class="form-group col-md-5 col-md-offset-1">
                     <label>Color</label>
 
-                    <input class="form-control" type="text" name="color" placeholder="Enter Color here ..">
+                    <input class="form-control" type="text" name="color" placeholder="Enter Color here .." value="{{ old('color') }}">
                 </div>
             <hr>
 
@@ -98,13 +159,13 @@
             <div class="form-group col-md-5">
                     <label>Chat Lieu</label>
 
-                    <input class="form-control" type="text" name="material" placeholder="Chat Lieu ..">
+                    <input class="form-control" type="text" name="material" placeholder="Chat Lieu .."  value="{{ old('material') }}">
                 </div>
 
             <div class="form-group col-md-5 col-md-offset-1">
                     <label>Gia Thanh</label>
 
-                    <input class="form-control" type="text" name="cost" placeholder="Enter Cost here ..">
+                    <input class="form-control" type="text" name="cost" placeholder="Enter Cost here .."  value="{{ old('cost') }}">
                 </div>
             <hr>
 
@@ -114,7 +175,7 @@
             <div class="form-group col-md-5">
                     <label>So San Pham Co San</label>
 
-                    <input class="form-control" type="text" name="quantity_remain" placeholder="So San Pham co san ..">
+                    <input class="form-control" type="text" name="quantity_remain" placeholder="So San Pham co san .." value="{{ old('quantity_remain') }}">
                 </div>
         </div>
 
