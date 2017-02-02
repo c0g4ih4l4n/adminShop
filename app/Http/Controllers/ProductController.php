@@ -60,10 +60,11 @@ class ProductController extends Controller
      */
     public function store(ProductCreateRequest $request)
     {
-        echo '<pre>';
-            print_r($request->toArray());
-        echo '</pre>';
+        $product = Product::withRequest($request);
 
+        $product->save();
+
+        // return Redirect::route('product.index');
     }
 
     /**

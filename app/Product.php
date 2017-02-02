@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Illuminate\Http\Request;
+
 use App\Presenters\ProductPresenter;
 use McCool\LaravelAutoPresenter\HasPresenter;
 use Illuminate\Database\Eloquent\Model;
@@ -17,5 +19,27 @@ class Product extends Model implements HasPresenter
     public function getPresenterClass()
     {
         return ProductPresenter::class;
+    }
+
+    /**
+     * function create new object with request
+     * @param  ProductCreateRequest $request request for create new product
+     * @return Product           new object
+     */
+    public static function withRequest(Request $request)
+    {
+        $product = new self();
+
+        $product->name            = $request->name;
+        $product->sex             = $request->sex;
+        $product->size            = $request->size;
+        $product->color           = $request->color;
+        $product->material        = $request->material;
+        $product->cost            = $request->cost;
+        $product->quantity_remain = $request->quantity_remain;
+        $product->category_id     = $request->category_id;
+        $product->brand_id        = $request->brand_id;
+
+        return $product;
     }
 }

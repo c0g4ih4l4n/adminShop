@@ -23,7 +23,7 @@ class Category extends Model
     {
         $cate = new self();
 
-        $cate->name = $request->name;
+        $cate->name               = $request->name;
         $cate->number_of_products = 0;
 
         return $cate;
