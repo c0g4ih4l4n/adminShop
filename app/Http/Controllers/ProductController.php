@@ -7,6 +7,7 @@ use App\Category;
 use App\Brand;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductCreateRequest;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -54,12 +55,15 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\ProductCreateRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductCreateRequest $request)
     {
-        //
+        echo '<pre>';
+            print_r($request->toArray());
+        echo '</pre>';
+
     }
 
     /**
