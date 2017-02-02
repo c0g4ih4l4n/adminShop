@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Category;
+use App\Brand;
 
 use Illuminate\Http\Request;
 
@@ -42,7 +44,11 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $data = array('list_category' => Category::all(),
+            'list_brand' => Brand::all()
+            );
+
+        return view('admin.product_add')->with($data);
     }
 
     /**

@@ -40,31 +40,38 @@
             <label>Sex</label>
             <div class="radio">
                 <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Nam
+                    <input type="radio" name="sex" id="optionsRadios1" value="option1" checked="">Nam
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Nu
+                    <input type="radio" name="sex" id="optionsRadios2" value="option2">Nu
                 </label>
             </div>
         </div>
         </div>
 
+        {{-- List Category --}}
         <div class="row">
             <div class="form-group col-md-5">
                     <label>Category</label>
 
-                    <select class="form-control">
-                        <option>One Vale</option>
+                    <select class="form-control" name="category">
+                        <option value="0">Pick A Category</option>
+                    @foreach ($list_category as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
                     </select>
                 </div>
 
             <div class="form-group col-md-5 col-md-offset-1">
                     <label>Brand</label>
 
-                    <select class="form-control">
-                        <option>One Vale</option>
+                    <select class="form-control" name="brand">
+                        <option value="0">Pick A Brand</option>
+                    @foreach ($list_brand as $brand)
+                        <option value="{{ $brand->id }}">{{ $brand->name }}</option>
+                    @endforeach
                     </select>
                 </div>
             <hr>
@@ -175,7 +182,7 @@
         <div class="clearfix"></div>
 
 
-            <button type="submit" class="btn btn-info">Create </button>
+            <button type="submitbmit" class="btn btn-info">Create </button>
 
         </form>
     </div>
