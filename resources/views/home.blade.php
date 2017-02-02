@@ -1,6 +1,17 @@
 ﻿
 
 @extends ('layouts.main')
+
+@section ('header-css')
+
+    @include ('layouts.material.header-css-main')
+@stop
+
+@section ('script')
+    @include ('layouts.material.main-script')
+
+@stop
+
 @section ('content')
 <!-- /. NAV TOP  -->
 
