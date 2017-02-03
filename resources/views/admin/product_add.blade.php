@@ -209,7 +209,7 @@
                 <span class="btn btn-success fileinput-button">
                     <i class="glyphicon glyphicon-plus"></i>
                     <span>Add files...</span>
-                    <input type="file" name="files[]" multiple>
+                    <input type="file" multiple>
                 </span>
                 <button type="submit" class="btn btn-primary start">
                     <i class="glyphicon glyphicon-upload"></i>
@@ -240,12 +240,12 @@
         <!-- The table listing the files available for upload/download -->
         <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
 
-        <div class="clearfix"></div>
-
-
             <button type="submitbmit" class="btn btn-info">Create </button>
 
         </form>
+
+
+
     </div>
     {{-- ./PANEL BODY --}}
 </div>
