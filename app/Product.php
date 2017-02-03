@@ -8,6 +8,9 @@ use App\Presenters\ProductPresenter;
 use McCool\LaravelAutoPresenter\HasPresenter;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Category;
+use App\Photo;
+
 class Product extends Model implements HasPresenter
 {
     protected $table = 'products';
@@ -15,6 +18,18 @@ class Product extends Model implements HasPresenter
     protected $fillable = ['id', 'name', 'size', 'color', 'material', 'cost', 'quantity_remain', 'category_id', 'brand_id'];
 
     public $timestamp = false;
+
+    // relation belongsTo Category
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
+    // relation morphmany image
+    public function photos()
+    {
+        return $this->morphMany('App\Photo', 'photo');
+    }
 
     public function getPresenterClass()
     {
