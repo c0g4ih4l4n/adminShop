@@ -9,6 +9,7 @@
         "blueimp/jquery-file-upload": "^9.14",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
+        "league/flysystem-aws-s3-v3": "~1.0",
         "mccool/laravel-auto-presenter": "^5.0"
     },
     "require-dev": {

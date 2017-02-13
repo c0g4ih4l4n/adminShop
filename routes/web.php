@@ -24,3 +24,5 @@ Route::get('/test', 'TestController@testView');
 Route::resource('category', 'CategoryController');
 
 Route::resource('product', 'ProductController');
+
+Route::resource('brand', 'BrandController');

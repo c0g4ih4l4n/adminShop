@@ -98,11 +98,11 @@
                 <ul class="nav nav-second-level">
 
                     <li>
-                        <a href="{{ URL::route('home') }}"><i class="fa fa-eyedropper "></i>Create New Brand</a>
+                        <a href="{{ URL::route('brand.create') }}"><i class="fa fa-eyedropper "></i>Create New Brand</a>
                     </li>
 
                     <li>
-                        <a href=""><i class="fa fa-list"></i>Brand List</a>
+                        <a href="{{ URL::route('brand.index') }}"><i class="fa fa-list"></i>Brand List</a>
                     </li>
 
                 </ul>

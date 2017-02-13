@@ -17,7 +17,7 @@ class Product extends Model implements HasPresenter
 
     protected $fillable = ['id', 'name', 'size', 'color', 'material', 'cost', 'quantity_remain', 'category_id', 'brand_id'];
 
-    public $timestamp = false;
+    public $timestamp = true;
 
     // relation belongsTo Category
     public function category()
@@ -25,7 +25,7 @@ class Product extends Model implements HasPresenter
         return $this->belongsTo('App\Category');
     }
 
-    // relation morphmany image
+    // relation morph-many image
     public function photos()
     {
         return $this->morphMany('App\Photo', 'photo');

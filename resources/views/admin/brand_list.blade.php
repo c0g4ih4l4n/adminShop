@@ -1,0 +1,70 @@
+
+@extends ('layouts.main')
+
+@section ('header-css')
+    @include ('layouts.material.header-css-main')
+@stop
+
+@section ('content')
+<div id="page-wrapper">
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-head-line">Brand List</h1>
+                <h1 class="page-subhead-line">Include: Name, Number of Products</h1>
+
+            </div>
+        </div>
+        <!-- /. ROW  -->
+
+    <div class="row">
+
+
+<!--   Kitchen Sink -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Brand
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Brand Name</th>
+                        <th>Number Of Products</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach ($list_brand as $brand)
+
+                    <tr>
+                        <td>{{ $brand->id }}</td>
+                        <td>{{ $brand->name }}</td>
+                        <td>{{ $brand->number_of_products }}</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+                    </tr>
+
+                    @endforeach
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+ <!-- End  Kitchen Sink -->
+
+     </div>
+</div>
+    <!-- /. ROW  -->
+</div>
+@stop
+
+@section ('script')
+    @include ('layouts.material.main-script')
+@stop

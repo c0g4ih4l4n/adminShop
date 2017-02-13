@@ -2,29 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
-use App\Category;
 use App\Brand;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\ProductCreateRequest;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Response;
-use Illuminate\Support\Facades\Input;
-
-class ProductController extends Controller
+class BrandController extends Controller
 {
-    private $user;
-
-    public function __construct()
-    {
-        $this->middleware('checkrole:ProductManager');
-        $this->user = Auth::user();
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -32,11 +15,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $list_product = Product::all();
-
-        $data = array('list_product' => $list_product);
-
-        return view('admin.product_list')->with($data);
+        $data = array (
+            'list_brand' => Brand::all(),
+            );
+        return view('admin.brand_list')->with($data);
     }
 
     /**
@@ -46,34 +28,18 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $data = array('list_category' => Category::all(),
-            'list_brand' => Brand::all()
-            );
-
-        return view('admin.product_add')->with($data);
+        return view('admin.brand_add');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  App\Http\Requests\ProductCreateRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ProductCreateRequest $request)
+    public function store(Request $request)
     {
-        // $product = Product::withRequest($request);
 
-        $dir = public_path() . '/server/php/files';
-        $files = scandir($dir);
-        print_r($files);
-
-        echo '<br>';
-        $thumbnails = scandir($dir . '/thumbnail');
-        print_r($thumbnails);
-        // $product->save();
-
-
-        // return Redirect::route('product.index');
     }
 
     /**

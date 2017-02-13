@@ -24,6 +24,6 @@ class TestController extends Controller
 
     public function testView()
     {
-        return view('admin.product_add');
+        return view('admin.brand_add');
     }
 }
